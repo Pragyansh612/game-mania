@@ -1,0 +1,42 @@
+<%- include('../partials/header') %>
+<% if(message.length>0){ %>
+    <div class=" flex justify-center items-center absolute top-5 translate-y-1/2 p-2 rounded-xl bg-red-400">
+        <span class=" inline-block mt-1 mb-1 text-white">
+            <%= message %>
+        </span>
+    </div>
+    <% } %>
+    <main class="flex justify-center text-white">
+        <div>
+            <h1 class=" text-5xl font-bold text-orange-500 my-5 text-center"> Welcome <%= user.fullname %></h1>
+            <h1 class=" text-3xl font-bold text-orange-500 my-5 text-center">Games</h1>
+            <div class="flex flex-wrap text-center gap-10 justify-center text-wrap">
+                <% products.forEach(product=> { %>
+                    <div class=" h-60 w-52">
+                        <img src="data:image/jpeg;base64, <%= product.image.toString('base64') %>" alt=""
+                            class=" h-48 w-52">
+                        <div class="bg-slate-900 text-white h-16">
+                            <h1 class=" text-xl ">
+                                <%= product.name %>
+                            </h1>
+                            <div class=" flex justify-center gap-10">
+                                <h1>
+                                    <%= product.price %>
+                                </h1>
+                                <h1>
+                                    <%= product.discount %>
+                                </h1>
+                                <button onsubmit="" class="material-symbols-outlined">
+                                    <a href="/users/add/<%=product._id %>">add_circle</a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <% }); %>
+            </div>
+
+        </div>
+    </main>
+    </body>
+
+    </html>

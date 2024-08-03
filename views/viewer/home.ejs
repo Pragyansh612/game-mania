@@ -1,0 +1,32 @@
+<%- include('../partials/viewhead') %>
+
+    <% if(error.length>0){ %>
+        <div class=" flex justify-center items-center absolute top-5 translate-y-1/2 p-2 rounded-xl bg-red-400">
+            <span class=" inline-block mt-1 mb-1 text-white">
+                <%= error %>
+            </span>
+        </div>
+        <% } %>
+            <main class="flex justify-center text-white">
+                <div>
+                    <h1 class=" text-5xl font-bold text-orange-500 my-5">Welcome to Games - Mania</h1>
+                    <div class=" grid justify-center">
+                        <a href="/games" type="submit"
+                            class=" bg-blue-500 rounded-3xl w-24 m-2 p-2 font-bold text-white text-center">
+                            Games
+                        </a>
+                        <a href="/login" type="submit"
+                            class=" bg-blue-500 rounded-3xl w-24 m-2 p-2 font-bold text-white text-center">
+                            Login
+                        </a>
+                        <a href="/create" type="submit"
+                            class=" bg-blue-500 rounded-3xl w-24 m-2 p-2 font-bold text-white text-center">
+                            Register
+                        </a>
+                    </div>
+
+                </div>
+            </main>
+            </body>
+
+            </html>

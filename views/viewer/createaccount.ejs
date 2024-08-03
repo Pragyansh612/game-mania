@@ -1,0 +1,30 @@
+<%- include('../partials/viewhead') %>
+
+    <main class="flex justify-center">
+        <div class=" flex justify-center w-1/2 rounded-3xl">
+            <div class="">
+                <h1 class=" text-3xl font-bold m-5 text-white">Create Your Account</h1>
+                <form action="/create" method="post" class=" grid gap-1 text-center justify-center">
+                    <label for="fullname" class="text-xl text-white">Full Name</label>
+                    <input type="text" placeholder="Name" name="fullname"
+                        class=" text-center outline-none h-7 rounded-xl" required>
+                    <label for="fullname" class="text-xl text-white">Userame</label>
+                    <input type="text" placeholder="Username" name="username"
+                        class=" text-center outline-none h-7 rounded-xl" required>
+                    <label for="fullname" class="text-xl text-white">Email</label>
+                    <input type="text" placeholder="Email" name="email"
+                        class=" text-center outline-none h-7 rounded-xl" required>
+                    <label for="fullname" class="text-xl text-white ">Age</label>
+                    <input type="number" placeholder="Age" name="age" class="text-center outline-none h-7 rounded-xl remove-arrow" required>
+                    <label for="fullname" class="text-xl text-white">Contact</label>
+                    <input type="number" placeholder="Contact" name="contact" class="text-center outline-none h-7 rounded-xl remove-arrow" required>
+                    <label for="fullname" class="text-xl text-white">Password</label>
+                    <input type="password" placeholder="Password" name="password"
+                        class=" text-center outline-none h-7 rounded-xl" required>
+                    <button type="submit" class=" bg-blue-500 rounded-3xl m-2 p-2 font-bold text-white">Submit</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

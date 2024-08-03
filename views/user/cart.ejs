@@ -1,0 +1,43 @@
+<%- include('../partials/header') %>
+<% if(message.length>0){ %>
+    <div class=" flex justify-center items-center absolute top-5 translate-y-1/2 p-2 rounded-xl bg-red-400">
+        <span class=" inline-block mt-1 mb-1 text-white">
+            <%= message %>
+        </span>
+    </div> 
+    <% } %>
+    <main class="flex justify-center text-white">
+        <div>
+            <h1 class=" text-5xl font-bold text-orange-500 my-5 text-center"> Cart </h1>
+            <div class=" flex justify-between gap-32">
+                <div class="flex flex-wrap text-center gap-10 justify-center text-wrap">
+                    <% items.forEach(product=> { %>
+                        <div class=" h-60 w-52">
+                            <img src="data:image/jpeg;base64, <%= product.image.toString('base64') %>" alt=""
+                                class=" h-48 w-52">
+                            <div class="bg-slate-900 flex items-center justify-center gap-x-5 text-center text-white h-12">
+                                <h1 class=" text-xl text-center ">
+                                    <%= product.name %>
+                                </h1>
+                                <button onsubmit="" class="material-symbols-outlined">
+                                    <a href="/users/delete/<%=product._id %>">delete</a>
+                                </button>
+                            </div>
+                        </div>
+                        <% }); %>
+                </div>
+                <div class=" text-center gap-10 justify-center text-wrap">
+                    <h1 class=" text-2xl "> Total Order Value</h1>
+                    <% items.forEach(product=> { %>
+                        <h1>Price - <%= product.price %></h1>
+                        <h1>Discount - <%= product.discount %></h1>
+                        <% }); %>
+                    <h1> Total = <%=total %></h1>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+    </body>
+
+    </html>

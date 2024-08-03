@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games Mania</title>
+    <link rel="stylesheet" href=<%=url%>/css/output.css>
+    <style>
+        .remove-arrow::-webkit-inner-spin-button,
+        .remove-arrow::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body class="h-screen " style="background-image: url('/images/wallpaperflare.com_wallpaper.jpg'); background-repeat: no-repeat; background-attachment: fixed;
+  background-size: cover;">
+    <nav class=" h-12 flex justify-between items-center">
+        <a href="/" class=" text-violet-700 text-3xl font-bold mx-10"> GAMES - MANIA</a>
+        <div>
+            <ul class=" flex gap-5 mx-5 text-white">
+                <li><a href="">Home</a></li>
+                <li><a href="">Games</a></li>
+                <li><a href="">About US</a></li>
+                <li><a href="">Contact US</a></li>
+            </ul>
+        </div>
+    </nav>
+    <main class="flex justify-center">
+        <div class=" flex justify-center w-1/2 rounded-3xl">
+            <div class="">
+                <h1 class=" text-3xl font-bold m-5 text-white">Admin Register</h1>
+                <form action="/admin/create" method="post" class=" grid gap-1 text-center justify-center">
+                    <label for="fullname" class="text-xl text-white">Full Name</label>
+                    <input type="text" placeholder="Name" name="fullname"
+                        class=" text-center outline-none h-7 rounded-xl" required>
+                    <label for="fullname" class="text-xl text-white">Email</label>
+                    <input type="text" placeholder="Email" name="email" class=" text-center outline-none h-7 rounded-xl"
+                        required>
+                    <label for="fullname" class="text-xl text-white">GST Number</label>
+                    <input type="text" placeholder="GST number" name="gstno" class=" text-center outline-none h-7 rounded-xl"
+                        required>
+                    <label for="fullname" class="text-xl text-white">Password</label>
+                    <input type="password" placeholder="Password" name="password"
+                        class=" text-center outline-none h-7 rounded-xl" required>
+                    <button type="submit" 
+                    class=" bg-blue-500 rounded-3xl m-2 p-2 font-bold text-white">
+                        Register
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

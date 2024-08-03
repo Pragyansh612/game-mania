@@ -1,0 +1,17 @@
+<%- include('../partials/adminheader') %>
+    <% if(message.length>0){ %>
+        <div class=" flex justify-center items-center absolute top-5 translate-y-1/2 p-2 rounded-xl bg-red-400">
+            <span class=" inline-block mt-1 mb-1 text-white">
+                <%= message %>
+            </span>
+        </div>
+        <% } %>
+    <main class="flex justify-center text-white">
+        <div>
+            <h1 class=" text-5xl font-bold text-orange-500 my-5">Welcome <%= admin.fullname %>
+            </h1>
+        </div>
+    </main>
+</body>
+
+</html>

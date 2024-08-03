@@ -1,0 +1,30 @@
+<%- include('../partials/adminheader') %>
+
+    <main class="flex justify-center">
+        <div>
+            <h1 class=" text-5xl font-bold text-orange-500 my-5 text-center">Create Games
+            </h1>
+            <form action="/admin/creategames" method="post" , enctype="multipart/form-data">
+                <h1 class=" text-3xl text-center text-white"> Games Details</h1>
+                <div class=" grid gap-4 my-2">
+                    <label for="image" class=" text-white">Game Image</label>
+                    <input class=" text-white self-center" type="file" name="image" id="" placeholder="">
+                    <div class=" flex flex-wrap gap-2">
+                        <input type="text" placeholder="Game Name" name="name"
+                            class=" text-center outline-none h-7 rounded-xl" required>
+                        <input type="number" placeholder="Price" name="price"
+                            class=" text-center outline-none h-7 rounded-xl remove-arrow" required>
+                        <input type="number" placeholder="Discount" name="discount"
+                            class=" text-center outline-none h-7 rounded-xl remove-arrow">
+                    </div>
+                </div>
+                <div class=" flex justify-center">
+                    <button type="submit"
+                        class=" bg-blue-500 rounded-3xl m-2 p-2 w-20 font-bold text-white">Create</button>
+                </div>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

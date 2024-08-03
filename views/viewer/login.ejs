@@ -1,0 +1,22 @@
+<%- include('../partials/viewhead') %>
+
+    <main class="flex justify-center">
+        <div class=" flex justify-center w-1/2 rounded-3xl text-center">
+            <div class="">
+                <h1 class=" text-3xl font-bold m-5 text-white">Login</h1>
+                <form action="/login" method="post" class=" grid gap-1 text-center justify-center">
+                    <label for="fullname" class="text-xl text-white">Email</label>
+                    <input type="text" placeholder="Email" name="email"
+                        class=" text-center outline-none h-7 rounded-xl" required>
+                    <label for="fullname" class="text-xl text-white">Password</label>
+                    <input type="password" placeholder="Password" name="password"
+                        class=" text-center outline-none h-7 rounded-xl" required>
+                    <button type="submit" class=" bg-blue-500 rounded-3xl m-2 p-2 font-bold text-white">
+                        Login
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
